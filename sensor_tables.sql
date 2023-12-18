@@ -1,3 +1,5 @@
+--Author: Sebastian Quevedo Silva
+--Date: December 17, 2023
 -- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
