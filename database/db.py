@@ -1,3 +1,5 @@
+# Author: Sebastian Quevedo Silva
+# Date: December 17, 2023
 import pymysql
 import json
 from datetime import datetime
