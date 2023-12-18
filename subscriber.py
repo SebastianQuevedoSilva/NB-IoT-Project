@@ -1,3 +1,6 @@
+# Author: Sebastian Quevedo Silva
+# Date: December 17, 2023
+
 import paho.mqtt.client as mqtt
 import math
 from database import db
