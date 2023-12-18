@@ -1,3 +1,5 @@
+// COAuthor: Sebastian Quevedo Silva
+// Date: December 17, 2023
 #include <Arduino.h>
 #include <Wire.h>
 #include <SparkFun_SHTC3.h>
