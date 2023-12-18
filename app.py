@@ -1,3 +1,5 @@
+# Author: Sebastian Quevedo Silva
+# Date: December 17, 2023
 # Flask Client, no usado para la presentación real,     
 
 from flask import Flask, render_template
