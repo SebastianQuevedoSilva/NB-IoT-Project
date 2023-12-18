@@ -1,0 +1,10 @@
+{
+    "get_humedad":"SELECT value, timestamp FROM HumidityData ORDER BY timestamp DESC",
+    "get_ppm":"SELECT value, timestamp FROM PPMData ORDER BY timestamp DESC",
+    "get_batery": "SELECT value, timestamp FROM BatteryData ORDER BY timestamp DESC",
+    "get_temperatura": "SELECT value, timestamp FROM TemperatureData ORDER BY timestamp DESC",
+    "set_temperatura": "INSERT INTO TemperatureData (value) VALUES (%s)",
+    "set_batery": "INSERT INTO BatteryData (value) VALUES (%s)",
+    "set_ppm": "INSERT INTO PPMData (value) VALUES (%s)",
+    "set_humedad": "INSERT INTO HumidityData (value) VALUES (%s)"
+}

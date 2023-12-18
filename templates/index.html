@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/batery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/humedad.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/temp.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ppm.js') }}"></script>
+  </head>
+  <body>
+    <div style="width: 80%; margin: auto">
+      <!-- Gráfico de Temperatura -->
+      <canvas id="graficoTemperatura"></canvas>
+
+      <!-- Gráfico de Humedad -->
+      <canvas id="graficoHumedad"></canvas>
+
+      <!-- Gráfico de PPM -->
+      <canvas id="graficoPPM"></canvas>
+
+      <!-- Gráfico de Batería -->
+      <canvas id="graficoBateria"></canvas>
+    </div>
+    <script>
+      // Función para renderizar un gráfico
+      function renderizarGrafico(titulo, labels, valores, idCanvas) {
+        var ctx = document.getElementById(idCanvas).getContext("2d");
+        var chart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: titulo,
+                backgroundColor: "rgba(75, 192, 192, 0.2)",
+                borderColor: "rgba(75, 192, 192, 1)",
+                data: valores,
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              x: [
+                {
+                  type: "time",
+                  time: {
+                    unit: "minute",
+                  },
+                },
+              ],
+              y: [
+                {
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                },
+              ],
+            },
+          },
+        });
+      }
+
+      // Llama a las funciones para obtener y mostrar los datos en cada gráfico
+      obtenerDatosTemperatura();
+      obtenerDatosHumedad();
+      obtenerDatosPPM();
+      obtenerDatosBateria();
+    </script>
+  </body>
+</html>
